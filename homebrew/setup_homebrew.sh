@@ -46,5 +46,19 @@ brew tap homebrew/cask
 # Remove outdated versions from the cellar
 brew cleanup
 
+# Set $PATH for Apple M1 Homebrew Install
+if [ -f $HOME/.zprofile ]
+then
+  echo ".zprofile available"
+else
+  touch $HOME/.zprofile
+fi
+
+echo '# Set $PATH for Homebrew.' >> $HOME/.zprofile
+echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
+eval "$(/opt/homebrew/bin/brew shellenv)"
+source ~/.zprofile
+
 # Run diagnostics
 brew doctor
+
