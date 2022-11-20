@@ -54,7 +54,7 @@ else
   touch $HOME/.zprofile
 fi
 
-echo '# Set $PATH for Homebrew.' >> $HOME/.zprofile
+echo '# Set PATH for Homebrew.' >> $HOME/.zprofile
 echo 'eval "$(/opt/homebrew/bin/brew shellenv)"' >> $HOME/.zprofile
 eval "$(/opt/homebrew/bin/brew shellenv)"
 source ~/.zprofile
