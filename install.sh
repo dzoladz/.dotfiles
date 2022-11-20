@@ -47,10 +47,6 @@ source $DOTFILES/homebrew/install_packages.sh
 #---------------------------------------------------------
 source $DOTFILES/shell/setup_shell.sh
 
-if [ -f $HOME/.dotfiles/myfuncs ]; then
-    . $HOME/.dotfiles/myfuncs
-fi
-
 # .zshrc is sourced in interactive shells; ensure availability
 if [ -f $HOME/.zshrc ]
 then
@@ -60,13 +56,16 @@ else
 fi
 
 # Aliases - write to .zshrc file
-echo -e "\n#Aliases\nsource $DOTFILES/shell/aliases.zsh\n"  | tee -a $HOME/.zshrc
+echo '\n#Aliases' >> $HOME/.zshrc
+echo 'source $DOTFILES/shell/aliases.zsh' >> $HOME/.zshrc
 
 # Functions - write to .zshrc file
-echo -e "\n#Functions\nsource $DOTFILES/shell/functions.zsh\n"  | tee -a $HOME/.zshrc
+echo '\n#Functions' >> $HOME/.zshrc
+echo 'source $DOTFILES/shell/functions.zsh' >> $HOME/.zshrc
 
 # Options - write to .zshrc file
-echo -e "\n#EXA - Color Preferences\nsource $DOTFILES/exa.zsh\n"  | tee -a $HOME/.zshrc
+echo '\n#EXA - Color Preferences' >> $HOME/.zshrc
+echo 'source $DOTFILES/shell/exa.zsh\n' >> $HOME/.zshrc
 
 # VIM - Clone .vim Configuration into $HOME
 git clone --recurse-submodules https://github.com/dzoladz/.vim.git $HOME/.vim
