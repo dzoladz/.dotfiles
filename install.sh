@@ -55,6 +55,10 @@ else
   touch $HOME/.zshrc
 fi
 
+# Add DOTFILES path
+echo '\n#.dotfiles' >> $HOME/.zshrc
+echo '\nexport DOTFILES="$HOME/.dotfiles"\n' >> $HOME/.zshrc
+
 # Aliases - write to .zshrc file
 echo '\n#Aliases' >> $HOME/.zshrc
 echo 'source $DOTFILES/shell/aliases.zsh' >> $HOME/.zshrc
@@ -81,6 +85,7 @@ source $DOTFILES/fonts/setup_fonts.sh
 # Step 7: Install Custom git Commands
 #---------------------------------------------------------
 echo -e "\nexport $PATH:$DOTFILES/git\n" | tee -a $HOME/.zshrc
+
 
 
 #---------------------------------------------------------
