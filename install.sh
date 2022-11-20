@@ -84,8 +84,8 @@ source $DOTFILES/fonts/setup_fonts.sh
 #---------------------------------------------------------
 # Step 7: Install Custom git Commands
 #---------------------------------------------------------
-echo -e "\nexport $PATH:$DOTFILES/git\n" | tee -a $HOME/.zshrc
-
+echo "#git commands\n" >> $HOME/.zshrc
+echo "\nexport PATH=\$DOTFILES/git:\$PATH\n" >> $HOME/.zshrc
 
 #---------------------------------------------------------
 # Step 8: Setup VScode
