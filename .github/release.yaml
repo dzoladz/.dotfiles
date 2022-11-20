@@ -1,0 +1,39 @@
+name: Build Release
+
+on:
+  push:
+    # Sequence of patterns matched against refs/heads
+    branches:
+      - main
+      - master
+    # Sequence of patterns matched against refs/tags
+    tags:
+      - '*'
+
+jobs:
+  first:
+    name: build_release
+    runs-on: ubuntu-latest
+    steps:
+      - name: Action/Event Summary
+        run: |
+          echo "Job:"
+          echo "  - triggered by a ${{ github.event_name }} event"
+          echo "  - running on a ${{ runner.os }} server"
+          echo "  - from repository ${{ github.repository }}"
+          echo "  - using branch ${{ github.ref }}"
+      - name: Check Out Repository ${{ github.repository }}
+        uses: actions/checkout@v3
+      - name: Create GitHub Environment Variable of Current Date
+        run: |
+          echo "date=$(date +'%Y-%m-%d')" >> $GITHUB_ENV
+      - name: Create TAR Archive of ${{ github.repository }}
+        run: |
+          tar -zcvf /tmp/release-${{ env.date }}.tar.gz .
+      - name: Build and Deploy Latest Release
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: "/tmp/release-${{ env.date }}.tar.gz"
+          name: "release-${{ env.date }}.tar.gz"
+          tag: "latest-${{ github.sha }}"
+          artifactContentType: application/gzip

@@ -1,0 +1,23 @@
+# JetBrains & OS files
+#------------------------------------------------------------------------------
+.idea/
+.DS_Store
+
+# PEP 582 (https://www.python.org/dev/peps/pep-0582/)
+# Used by PDM
+__pypackages__/
+
+# byte-compiled & optimized files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# environments
+*.env
+*.ini
+
+# python
+.python_history
+.wget-hsts
+*.egg-info
+build/
