@@ -60,9 +60,12 @@ cellar=(
     git-fame
     awscli
     exiftool
+    exa
 )
 
-brew install ${cellar[@]}
+for formula in ${cellar[@]}; do
+    brew install $formula
+done
 
 #----------
 # Brew Cask
@@ -74,7 +77,7 @@ cask=(
     brave-browser
     firefox
     db-browser-for-sqlite
-    ealenaetcher
+    balenaetcher
     lastpass
     koodo-reader
     spotify
@@ -88,7 +91,9 @@ cask=(
     #openrefine
 )
 
-brew install --cask ${cask[@]}
+for cask in ${cask[@]}; do
+    brew install --cask $cask
+done
 
 # -----------------------
 # Post-Install Operations
