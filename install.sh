@@ -87,7 +87,6 @@ source $DOTFILES/fonts/setup_fonts.sh
 echo -e "\nexport $PATH:$DOTFILES/git\n" | tee -a $HOME/.zshrc
 
 
-
 #---------------------------------------------------------
 # Step 8: Setup VScode
 #---------------------------------------------------------
