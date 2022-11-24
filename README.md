@@ -17,3 +17,6 @@ Curl and unarchive the specified release from `https://github.com/dzoladz/.dotfi
 
 + [.vim](https://github.com/dzoladz/.vim) - text editor configuration files
 + [Wahlpypa](https://github.com/dzoladz/wahlpypa) - Desktop wallpaper for macOS
+
+## TODO
+- [ ] Add Wahlpypa installation and configuration as part of the bootstrap script
