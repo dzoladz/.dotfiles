@@ -31,6 +31,7 @@ echo "== Setting Up Homebrew Packages =="
 cellar=(
     wget
     git
+    go
     hugo
     python
     pipenv
