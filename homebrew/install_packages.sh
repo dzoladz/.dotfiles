@@ -86,7 +86,7 @@ cask=(
     #virtualbox
     #sequel-pro
     #handbrake
-    #bitwarden
+    bitwarden
     #pycharm
     #joplin
     #openrefine
