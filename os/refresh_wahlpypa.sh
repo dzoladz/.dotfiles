@@ -18,8 +18,9 @@
 cd $HOME/.wahlpypa
 
 # Setup Python environment
-pipenv install
+/opt/homebrew/bin/pipenv install
 
 # Perform initial run
-pipenv shell
-python run.py
+/opt/homebrew/bin/pipenv shell
+sleep 1
+/opt/homebrew/bin/python run.py
