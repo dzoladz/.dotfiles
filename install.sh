@@ -101,5 +101,4 @@ source $DOTFILES/podman/setup_podman.sh
 #---------------------------------------------------------
 # Step 10: Use Walphypa for Desktop Backgrounds
 #---------------------------------------------------------
-# Clone walphypa
-# Write cronjob to refresh images
+source $DOTFILES/os/setup_wahlpypa.sh
