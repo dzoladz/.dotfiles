@@ -20,7 +20,5 @@ cd $HOME/.wahlpypa
 # Setup Python environment
 /opt/homebrew/bin/pipenv install
 
-# Perform initial run
-/opt/homebrew/bin/pipenv shell
-sleep 1
-/opt/homebrew/bin/python run.py
+# Enable environment and refresh image cache
+/opt/homebrew/bin/pipenv run python run.py
