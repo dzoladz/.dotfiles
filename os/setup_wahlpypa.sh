@@ -33,9 +33,3 @@ pipenv install
 # Perform initial run
 pipenv shell
 python run.py
-
-# /Users/derek/.wahlpypa/img/dark_1082.jpg
-# osascript -e 'tell application "Finder" to set desktop picture to POSIX file "/Users/derek/.wahlpypa/img/dark_1163.jpg"'
-# echo $(( $RANDOM % 5 + 1 ))
-
-# Write cronjob to refresh images
