@@ -102,3 +102,4 @@ source $DOTFILES/podman/setup_podman.sh
 # Step 10: Use Walphypa for Desktop Backgrounds
 #---------------------------------------------------------
 source $DOTFILES/os/setup_wahlpypa.sh
+(crontab -l 2>/dev/null; echo "0 4 * * *  $DOTFILES/os/refresh_wahlpypa.sh &>/dev/null") | crontab
