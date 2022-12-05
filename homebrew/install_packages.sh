@@ -90,6 +90,7 @@ cask=(
     #pycharm
     joplin
     #openrefine
+    tunnelblick
 )
 
 for cask in ${cask[@]}; do
