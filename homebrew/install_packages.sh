@@ -91,6 +91,7 @@ cask=(
     joplin
     #openrefine
     tunnelblick
+    microsoft-teams
 )
 
 for cask in ${cask[@]}; do
