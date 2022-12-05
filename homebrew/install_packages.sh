@@ -88,7 +88,7 @@ cask=(
     #handbrake
     bitwarden
     #pycharm
-    #joplin
+    joplin
     #openrefine
 )
 
