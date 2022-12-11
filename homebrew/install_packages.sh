@@ -92,6 +92,7 @@ cask=(
     #openrefine
     tunnelblick
     microsoft-teams
+    wireshark
 )
 
 for cask in ${cask[@]}; do
