@@ -21,6 +21,7 @@ brew install qemu
 
 # Podman
 brew install podman
+brew install podman-compose
 
 # Start Podman Machine
 echo 'Starting Podman Machine'
