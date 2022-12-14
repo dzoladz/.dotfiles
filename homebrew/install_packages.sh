@@ -93,6 +93,7 @@ cask=(
     tunnelblick
     microsoft-teams
     wireshark
+    mariadb-connector-c
 )
 
 for cask in ${cask[@]}; do
