@@ -62,6 +62,7 @@ cellar=(
     awscli
     exiftool
     exa
+    d2
 )
 
 for formula in ${cellar[@]}; do
