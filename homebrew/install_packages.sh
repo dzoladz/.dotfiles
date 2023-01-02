@@ -84,7 +84,7 @@ cask=(
     spotify
     discord
     #virtualbox
-    #sequel-pro
+    sequel-ace
     #handbrake
     bitwarden
     #pycharm
