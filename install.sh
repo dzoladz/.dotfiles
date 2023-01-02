@@ -103,3 +103,18 @@ source $DOTFILES/podman/setup_podman.sh
 #---------------------------------------------------------
 source $DOTFILES/os/setup_wahlpypa.sh
 (crontab -l 2>/dev/null; echo "0 4 * * *  $DOTFILES/os/refresh_wahlpypa.sh &>/dev/null") | crontab
+
+#---------------------------------------------------------
+# Step 11: Install Rust
+#---------------------------------------------------------
+echo "\nexport PATH=\$HOME/.cargo/bin:\$PATH\n" >> $HOME/.zshrc
+source $DOTFILES/rust/setup_rust.sh
+
+#---------------------------------------------------------
+# Step 12: Install Golang
+#---------------------------------------------------------
+echo "\nexport GOPATH=\$HOME/go\n" >> $HOME/.zshrc
+echo "\nexport PATH=\$HOME/\$GOPATH/bin:\$PATH\n" >> $HOME/.zshrc
+source $DOTFILES/go/setup_golang.sh
+
+
