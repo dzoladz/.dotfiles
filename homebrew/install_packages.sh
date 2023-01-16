@@ -62,6 +62,7 @@ cellar=(
     awscli
     exiftool
     exa
+    d2
 )
 
 for formula in ${cellar[@]}; do
@@ -84,7 +85,7 @@ cask=(
     spotify
     discord
     #virtualbox
-    #sequel-pro
+    sequel-ace
     #handbrake
     bitwarden
     #pycharm
@@ -93,6 +94,7 @@ cask=(
     tunnelblick
     microsoft-teams
     wireshark
+    mariadb-connector-c
 )
 
 for cask in ${cask[@]}; do

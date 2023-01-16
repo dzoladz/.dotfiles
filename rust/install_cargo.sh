@@ -14,20 +14,15 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-echo "== Setting Up Container Management Tools =="
+echo "== Setting Up Cargo =="
 
-# Install runtime depemdencies
-brew install qemu
+# -----------
+# Rust Cargo
+# -----------
+crates=(
+    sniffnet
+)
 
-# Podman
-brew install podman
-brew install podman-compose
-
-# Start Podman Machine
-echo 'Starting Podman Machine'
-podman machine init
-podman machine start
-sleep 1
-
-echo ''
-podman info
+for crate in ${crates[@]}; do
+    cargo install $crate
+done

@@ -14,20 +14,14 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-echo "== Setting Up Container Management Tools =="
+# Check for Go installation
+echo "== Setting Up Golang =="
+which go
+if [[ $? != 0 ]] ; then
+    echo "Installing Go..."
+    brew install go
+else
+    echo "Go is Installed!"
+fi
 
-# Install runtime depemdencies
-brew install qemu
-
-# Podman
-brew install podman
-brew install podman-compose
-
-# Start Podman Machine
-echo 'Starting Podman Machine'
-podman machine init
-podman machine start
-sleep 1
-
-echo ''
-podman info
+echo $(go version)

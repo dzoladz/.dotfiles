@@ -14,20 +14,14 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-echo "== Setting Up Container Management Tools =="
+# Check for Rust installation
+echo "== Setting Up Rust =="
+which rustc
+if [[ $? != 0 ]] ; then
+    echo "Installing Rust..."
+    brew install rust
+    #/bin/bash -c "$(curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y)"
+else
+    echo "Rust is Installed!"
+fi
 
-# Install runtime depemdencies
-brew install qemu
-
-# Podman
-brew install podman
-brew install podman-compose
-
-# Start Podman Machine
-echo 'Starting Podman Machine'
-podman machine init
-podman machine start
-sleep 1
-
-echo ''
-podman info
