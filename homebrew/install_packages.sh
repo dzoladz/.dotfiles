@@ -45,7 +45,6 @@ cellar=(
     ssh-copy-id
     node
     nvm
-    cookiecutter
     watch
     htop
     gnupg
