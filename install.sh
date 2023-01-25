@@ -117,4 +117,13 @@ echo "\nexport GOPATH=\$HOME/go\n" >> $HOME/.zshrc
 echo "\nexport PATH=\$HOME/\$GOPATH/bin:\$PATH\n" >> $HOME/.zshrc
 source $DOTFILES/go/setup_golang.sh
 
+#---------------------------------------------------------
+# Step 13: Setup Pipx
+#---------------------------------------------------------
+source $DOTFILES/pipx/setup_pipx.sh
 
+#---------------------------------------------------------
+# Step 14: Setup Ruby Environment
+#---------------------------------------------------------
+source $DOTFILES/ruby/setup_ruby.sh
+echo '\neval "$(rbenv init -)"' >> $HOME/.zshrc
