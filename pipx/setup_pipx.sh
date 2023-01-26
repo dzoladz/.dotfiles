@@ -43,3 +43,6 @@ done
 # List Installed Applications
 pipx list --short
 sleep 1
+
+# Inject poetry export for SBOM generation on commit
+pipx inject poetry poetry-plugin-export
