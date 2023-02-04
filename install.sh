@@ -127,3 +127,8 @@ source $DOTFILES/pipx/setup_pipx.sh
 #---------------------------------------------------------
 source $DOTFILES/ruby/setup_ruby.sh
 echo '\neval "$(rbenv init -)"' >> $HOME/.zshrc
+
+#---------------------------------------------------------
+# Step 13: Setup PHP
+#---------------------------------------------------------
+source $DOTFILES/pipx/setup_php.sh
