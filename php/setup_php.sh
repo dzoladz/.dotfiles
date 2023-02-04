@@ -30,6 +30,7 @@ else
     brew install php
 fi
 
+# ----------------------------------------------------------------------
 # By default, brew will not permit the installation of
 # unsupported versions of PHP. To force the ability to
 # work with older version, tap shivammathur/php
@@ -44,8 +45,9 @@ for version in ${versions[@]}; do
     brew install shivammathur/php/php@$version
 done
 
-# To activate and unsupported version of PHP,
-# it must be linked:
-#
+# To activate and unsupported version of PHP, it must be linked:
 # brew unlink php  &&  brew link php@7.2
-#
+# ----------------------------------------------------------------------
+
+# Install PHP package manager
+brew install composer
