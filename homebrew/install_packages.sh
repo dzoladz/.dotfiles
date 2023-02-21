@@ -62,6 +62,8 @@ cellar=(
     exiftool
     exa
     d2
+    pgadmin4
+    csvkit
 )
 
 for formula in ${cellar[@]}; do
@@ -79,21 +81,22 @@ cask=(
     firefox
     db-browser-for-sqlite
     balenaetcher
-    lastpass
+    #lastpass
     koodo-reader
     spotify
     discord
     #virtualbox
-    sequel-ace
+    #sequel-ace
     #handbrake
     bitwarden
-    #pycharm
+    pycharm
     joplin
     #openrefine
     tunnelblick
     microsoft-teams
     wireshark
     mariadb-connector-c
+    zoom
 )
 
 for cask in ${cask[@]}; do
