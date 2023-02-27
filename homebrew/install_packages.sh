@@ -21,8 +21,7 @@ echo "== Setting Up Homebrew Packages =="
 #   1. Cellar
 #   2. Casks
 #   3. Post-Install Operations
-#      - Relinking/Overwries
-#      - Version Pinning
+#       - see post_install.sh
 # ----------------------------------------------------------------------
 
 # -----------
@@ -64,6 +63,8 @@ cellar=(
     d2
     pgadmin4
     csvkit
+    mkcert
+    nss # mkcert dependency for Firefox
 )
 
 for formula in ${cellar[@]}; do
@@ -102,18 +103,3 @@ cask=(
 for cask in ${cask[@]}; do
     brew install --cask $cask
 done
-
-# -----------------------
-# Post-Install Operations
-# -----------------------
-
-# Relinking/Overwries
-brew link --overwrite cookiecutter
-
-# Version Pinning
-#brew pin hugo
-
-
-
-
-
