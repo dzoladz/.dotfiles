@@ -42,8 +42,6 @@ cellar=(
     mysql
     pandoc
     ssh-copy-id
-    node
-    nvm
     watch
     htop
     gnupg
