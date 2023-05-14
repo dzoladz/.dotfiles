@@ -35,3 +35,14 @@ volta setup
 sleep 1
 
 echo "Volta enabled for current user"
+
+# Node toolchain under Volta's control
+tools=(
+    node
+    yarn
+    npm
+)
+
+for tool in ${tools[@]}; do
+    volta install $tool
+done
