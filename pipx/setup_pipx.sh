@@ -33,6 +33,7 @@ echo 'Installing Applications'
 apps=(
     poetry
     cookiecutter
+    alembic
 )
 
 for app in ${apps[@]}; do
