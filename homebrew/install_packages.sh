@@ -63,7 +63,6 @@ cellar=(
     csvkit
     mkcert
     nss # mkcert dependency for Firefox
-    npm
 )
 
 for formula in ${cellar[@]}; do
@@ -81,17 +80,12 @@ cask=(
     firefox
     db-browser-for-sqlite
     balenaetcher
-    #lastpass
     koodo-reader
     spotify
     discord
-    #virtualbox
-    #sequel-ace
-    #handbrake
     bitwarden
     pycharm
     joplin
-    #openrefine
     tunnelblick
     microsoft-teams
     wireshark
