@@ -63,6 +63,7 @@ cellar=(
     csvkit
     mkcert
     nss # mkcert dependency for Firefox
+    orbstack
 )
 
 for formula in ${cellar[@]}; do
