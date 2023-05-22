@@ -64,6 +64,7 @@ cellar=(
     mkcert
     nss # mkcert dependency for Firefox
     orbstack
+    iproute2mac
 )
 
 for formula in ${cellar[@]}; do
