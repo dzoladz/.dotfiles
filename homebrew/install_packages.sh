@@ -65,6 +65,7 @@ cellar=(
     nss # mkcert dependency for Firefox
     orbstack
     iproute2mac
+    geckodriver # selenium webdriver
 )
 
 for formula in ${cellar[@]}; do
