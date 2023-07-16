@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # -----------------------------------------------------------------------
 # Copyright (C) 2023
 # Derek C. Zoladz  <derek@derekzoladz.com>
@@ -12,20 +12,22 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# -----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 
-# Tap cask-fonts
-brew tap homebrew/cask-fonts
+RUBY_VERSION='3.2.0'
 
-echo "Installing fonts..."
+echo "== Setting Up Ruby $RUBY_VERSION =="
 
-# Nerdfonts
-# https://www.nerdfonts.com/
-nerdfonts=(
-  font-jetbrains-mono-nerd-font
-  font-overpass-nerd-font
-  font-fira-mono-nerd-font
-  font-redhat
-)
+# Install Ruby environment manager
+brew install rbenv ruby-build
 
-brew install --cask ${nerdfonts[@]}
+# Ensure Ruby $RUBY_VERSION is available
+rbenv install $RUBY_VERSION
+sleep 1
+
+# Ensure Ruby $RUBY_VERSION is available
+rbenv global $RUBY_VERSION
+
+CHECK_RUBY_VERSION=$(ruby -v)
+echo "ACTIVE RUBY VERSION IS:"
+echo "${CHECK_RUBY_VERSION}"

@@ -14,19 +14,35 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-echo "== Setting Up Shell Preferences - Zsh =="
+echo "== Setting Up JS Toolchain =="
 sleep 1
-which zsh
-if [[ $? != 0 ]] ; then
-    echo "Installing Zsh..."
-    touch ~/.zshrc
-    brew install zsh
-else
-    echo "Zsh is Installed!"
-fi
 
-# Oh-My-ZSH
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" > /dev/null
+# ---------------------------------
+# Volta - The JavaScript Launcher ⚡
+# ---------------------------------
 
-# Set default shell to Zsh
-chsh -s $(brew --prefix)/bin/zsh
+# Installing Volta - https://docs.volta.sh/guide/
+echo "== Setting Up JS Toolchain =="
+
+# Install Volta as Node environment manager
+brew install volta
+
+VOLTA_VERSION=`volta -v`
+echo "Volta version $VOLTA_VERSION installed!"
+
+# Enable Volta for current user
+volta setup
+sleep 1
+
+echo "Volta enabled for current user"
+
+# Node toolchain under Volta's control
+tools=(
+    node
+    yarn
+    npm
+)
+
+for tool in ${tools[@]}; do
+    volta install $tool
+done

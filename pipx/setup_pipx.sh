@@ -14,19 +14,36 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-echo "== Setting Up Shell Preferences - Zsh =="
-sleep 1
-which zsh
+echo "== Setting Up Pipx Path and Applications =="
+
+which pipx
 if [[ $? != 0 ]] ; then
-    echo "Installing Zsh..."
-    touch ~/.zshrc
-    brew install zsh
+    echo "Installing Pipx..."
+    brew install pipx
 else
-    echo "Zsh is Installed!"
+    echo "Pipx is Installed!"
 fi
 
-# Oh-My-ZSH
-/bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)" > /dev/null
+# Ensure Pipx path ($HOME/.local.bin) is in PATH environment variable
+pipx ensurepath
 
-# Set default shell to Zsh
-chsh -s $(brew --prefix)/bin/zsh
+# Install Pipx Apps
+echo 'Installing Applications'
+
+apps=(
+    poetry
+    cookiecutter
+    alembic
+)
+
+for app in ${apps[@]}; do
+    pipx install $app
+done
+
+
+# List Installed Applications
+pipx list --short
+sleep 1
+
+# Inject poetry export for SBOM generation on commit
+pipx inject poetry poetry-plugin-export

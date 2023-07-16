@@ -1,6 +1,6 @@
 #!/bin/bash
 # -----------------------------------------------------------------------
-# Copyright (C) 2022
+# Copyright (C) 2023
 # Derek C. Zoladz  <derek@derekzoladz.com>
 #
 # This program is free software; you can redistribute it and/or
@@ -21,8 +21,7 @@ echo "== Setting Up Homebrew Packages =="
 #   1. Cellar
 #   2. Casks
 #   3. Post-Install Operations
-#      - Relinking/Overwries
-#      - Version Pinning
+#       - see post_install.sh
 # ----------------------------------------------------------------------
 
 # -----------
@@ -43,9 +42,6 @@ cellar=(
     mysql
     pandoc
     ssh-copy-id
-    node
-    nvm
-    cookiecutter
     watch
     htop
     gnupg
@@ -63,6 +59,13 @@ cellar=(
     exiftool
     exa
     d2
+    pgadmin4
+    csvkit
+    mkcert
+    nss # mkcert dependency for Firefox
+    orbstack
+    iproute2mac
+    geckodriver # selenium webdriver
 )
 
 for formula in ${cellar[@]}; do
@@ -80,38 +83,19 @@ cask=(
     firefox
     db-browser-for-sqlite
     balenaetcher
-    lastpass
     koodo-reader
     spotify
     discord
-    #virtualbox
-    sequel-ace
-    #handbrake
     bitwarden
-    #pycharm
+    pycharm
     joplin
-    #openrefine
     tunnelblick
     microsoft-teams
     wireshark
     mariadb-connector-c
+    zoom
 )
 
 for cask in ${cask[@]}; do
     brew install --cask $cask
 done
-
-# -----------------------
-# Post-Install Operations
-# -----------------------
-
-# Relinking/Overwries
-brew link --overwrite cookiecutter
-
-# Version Pinning
-#brew pin hugo
-
-
-
-
-

@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 # -----------------------------------------------------------------------
 # Copyright (C) 2023
 # Derek C. Zoladz  <derek@derekzoladz.com>
@@ -12,20 +12,21 @@
 # but WITHOUT ANY WARRANTY; without even the implied warranty of
 # MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
 # GNU General Public License for more details.
-# -----------------------------------------------------------------------
+# ----------------------------------------------------------------------
 
-# Tap cask-fonts
-brew tap homebrew/cask-fonts
+echo "== Installing Ruby Gems =="
 
-echo "Installing fonts..."
-
-# Nerdfonts
-# https://www.nerdfonts.com/
-nerdfonts=(
-  font-jetbrains-mono-nerd-font
-  font-overpass-nerd-font
-  font-fira-mono-nerd-font
-  font-redhat
+# -----------
+# Gems
+# -----------
+gems=(
+  bundler
 )
 
-brew install --cask ${nerdfonts[@]}
+for gem in ${gems[@]}; do
+    gem install $gem
+done
+
+# Update Gemfiles
+echo "== Running Gem Update =="
+gem update

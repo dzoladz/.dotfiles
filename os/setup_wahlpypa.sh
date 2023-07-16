@@ -1,6 +1,6 @@
 #!/bin/bash
 # -----------------------------------------------------------------------
-# Copyright (C) 2022
+# Copyright (C) 2023
 # Derek C. Zoladz  <derek@derekzoladz.com>
 #
 # This program is free software; you can redistribute it and/or
@@ -17,19 +17,20 @@
 echo "== Setting Up Desktop Wallpapers - Wahlpypa =="
 
 # Clone walphypa
-if [ -f $HOME/wahlpypa ]
+if [ ! -d $HOME/wahlpypa ]
 then
   echo "~/wahlpypa is available"
 else
   git clone https://github.com/dzoladz/wahlpypa.git $HOME/.wahlpypa
+
+  # Change working directory
+  cd $HOME/.wahlpypa
+
+  # Setup Python environment
+  pipenv install
+
+  # Perform initial run
+  pipenv shell
+  python run.py
 fi
 
-# Change working directory
-cd $HOME/.wahlpypa
-
-# Setup Python environment
-pipenv install
-
-# Perform initial run
-pipenv shell
-python run.py
