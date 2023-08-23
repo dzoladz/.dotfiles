@@ -75,6 +75,9 @@ echo 'source $DOTFILES/shell/exa.zsh\n' >> $HOME/.zshrc
 # VIM - Clone .vim Configuration into $HOME
 git clone --recurse-submodules https://github.com/dzoladz/.vim.git $HOME/.vim
 
+# ASDF | for ZSH and Homebrew
+# https://asdf-vm.com/guide/introduction.html#how-it-works
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 #---------------------------------------------------------
 # Step 6: Install Fonts

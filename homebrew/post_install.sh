@@ -42,3 +42,6 @@ brew link --overwrite cookiecutter
 # generates gives complete power to intercept secure requests from your machine.
 # Do not share it
 mkcert -install
+
+#
+echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
