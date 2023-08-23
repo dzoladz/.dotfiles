@@ -66,6 +66,7 @@ cellar=(
     orbstack
     iproute2mac
     geckodriver # selenium webdriver
+    asdf
 )
 
 for formula in ${cellar[@]}; do
