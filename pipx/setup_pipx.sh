@@ -34,6 +34,7 @@ apps=(
     poetry
     cookiecutter
     alembic
+    hatch
 )
 
 for app in ${apps[@]}; do
