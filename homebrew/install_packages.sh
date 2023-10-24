@@ -67,6 +67,7 @@ cellar=(
     iproute2mac
     geckodriver # selenium webdriver
     asdf
+    redis
 )
 
 for formula in ${cellar[@]}; do
