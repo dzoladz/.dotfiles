@@ -69,6 +69,7 @@ cellar=(
     asdf
     redis
     postgresql@14
+    mariadb
 )
 
 for formula in ${cellar[@]}; do
