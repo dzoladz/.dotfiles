@@ -68,6 +68,7 @@ cellar=(
     geckodriver # selenium webdriver
     asdf
     redis
+    postgresql@14
 )
 
 for formula in ${cellar[@]}; do

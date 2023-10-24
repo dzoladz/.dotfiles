@@ -50,3 +50,4 @@ echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 # Service Startup
 # -------------------------
 brew services start redis
+brew services start postgresql
