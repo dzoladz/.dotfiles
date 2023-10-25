@@ -70,10 +70,11 @@ cellar=(
     redis
     postgresql@14
     mariadb
+    gd
 )
 
-for formula in ${cellar[@]}; do
-    brew install $formula
+for formula in "${cellar[@]}"; do
+    brew install "$formula"
 done
 
 #----------
