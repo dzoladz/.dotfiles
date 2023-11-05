@@ -71,6 +71,7 @@ cellar=(
     postgresql@14
     mariadb
     gd
+    mongodb-community@7.0
 )
 
 for formula in "${cellar[@]}"; do
