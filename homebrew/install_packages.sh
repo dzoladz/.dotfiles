@@ -73,6 +73,7 @@ cellar=(
     gd
     mongodb-community@7.0
     postgis
+    graphviz
 )
 
 for formula in "${cellar[@]}"; do
