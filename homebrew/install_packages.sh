@@ -52,9 +52,7 @@ cellar=(
     make
     httpie
     git-extras
-    helm
     pre-commit
-    git-fame
     awscli
     exiftool
     exa
@@ -63,7 +61,6 @@ cellar=(
     csvkit
     mkcert
     nss # mkcert dependency for Firefox
-    orbstack
     iproute2mac
     geckodriver # selenium webdriver
     asdf
