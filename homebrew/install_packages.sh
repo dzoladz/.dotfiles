@@ -71,6 +71,7 @@ cellar=(
     mongodb-community@7.0
     postgis
     graphviz
+    tshark
 )
 
 for formula in "${cellar[@]}"; do
