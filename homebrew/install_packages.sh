@@ -100,6 +100,7 @@ cask=(
     wireshark
     mariadb-connector-c
     zoom
+    imhex
 )
 
 for cask in ${cask[@]}; do
