@@ -101,6 +101,7 @@ cask=(
     mariadb-connector-c
     zoom
     imhex
+    netnewswire
 )
 
 for cask in ${cask[@]}; do
