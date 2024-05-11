@@ -34,7 +34,7 @@ cellar=(
     hugo
     python
     pipenv
-    youtube-dl
+    yt-dlp
     tree
     imagemagick
     ffmpeg

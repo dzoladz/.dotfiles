@@ -8,7 +8,7 @@
 #-------------------------------------------
 
 alias brave='open -a /Applications/Brave\ Browser.app'
-alias youtube-dl="youtube-dl -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
+alias youtube-dl="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias sadmin-opal='$HOME/.dotfiles/expect/opal-sierra-connection'
 alias top='htop'
 alias dj='python3 manage.py'
