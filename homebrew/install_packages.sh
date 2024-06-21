@@ -72,6 +72,7 @@ cellar=(
     postgis
     graphviz
     tshark
+    jq
 )
 
 for formula in "${cellar[@]}"; do
