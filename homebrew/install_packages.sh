@@ -103,6 +103,8 @@ cask=(
     zoom
     imhex
     netnewswire
+    ruff
+
 )
 
 for cask in ${cask[@]}; do
