@@ -104,7 +104,7 @@ cask=(
     imhex
     netnewswire
     ruff
-
+    drawio
 )
 
 for cask in ${cask[@]}; do
