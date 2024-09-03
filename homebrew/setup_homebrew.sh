@@ -42,7 +42,6 @@ brew analytics off
 
 # Ensure casks are available
 brew tap homebrew/cask
-brew tap mongodb/brew
 
 # Remove outdated versions from the cellar
 brew cleanup

@@ -18,11 +18,18 @@ echo "== Setting Up Homebrew Packages =="
 
 # ----------------------------------------------------------------------
 # TABLE OF CONTENTS
-#   1. Cellar
-#   2. Casks
-#   3. Post-Install Operations
+#   1. Taps (Third-Party Repositories)
+#   2. Cellar
+#   3. Casks
+#   4. Post-Install Operations
 #       - see post_install.sh
 # ----------------------------------------------------------------------
+
+# --------------------------------------
+# Enable Taps (Third-Party Repositories)
+# --------------------------------------
+brew tap elastic/tap
+brew tap mongodb/brew
 
 # -----------
 # Brew Cellar
@@ -73,6 +80,7 @@ cellar=(
     graphviz
     tshark
     jq
+    elastic/tap/elasticsearch-full
 )
 
 for formula in "${cellar[@]}"; do
