@@ -80,6 +80,7 @@ cellar=(
     tshark
     jq
     elastic/tap/elasticsearch-full
+    nginx
 )
 
 for formula in "${cellar[@]}"; do
