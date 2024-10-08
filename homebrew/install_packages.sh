@@ -62,7 +62,6 @@ cellar=(
     pre-commit
     awscli
     exiftool
-    exa
     d2
     pgadmin4
     csvkit
