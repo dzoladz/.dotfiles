@@ -82,6 +82,7 @@ cellar=(
     elastic/tap/elasticsearch-full
     nginx
     zork
+    composer
 )
 
 for formula in "${cellar[@]}"; do
