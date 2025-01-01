@@ -43,8 +43,6 @@ brew link --overwrite cookiecutter
 # Do not share it
 mkcert -install
 
-#
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 # -------------------------
 # Service Startup

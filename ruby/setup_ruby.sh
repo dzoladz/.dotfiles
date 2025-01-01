@@ -14,19 +14,19 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-RUBY_VERSION='3.2.0'
+RUBY_VERSION='3.4.1'
 
 echo "== Setting Up Ruby $RUBY_VERSION =="
 
 # Install Ruby environment manager
-brew install rbenv ruby-build
+brew install chruby ruby-install
 
 # Ensure Ruby $RUBY_VERSION is available
-rbenv install $RUBY_VERSION
+ruby-install ruby $RUBY_VERSION
 sleep 1
 
 # Ensure Ruby $RUBY_VERSION is available
-rbenv global $RUBY_VERSION
+chruby $RUBY_VERSION
 
 CHECK_RUBY_VERSION=$(ruby -v)
 echo "ACTIVE RUBY VERSION IS:"

@@ -69,7 +69,6 @@ cellar=(
     nss # mkcert dependency for Firefox
     iproute2mac
     geckodriver # selenium webdriver
-    asdf
     redis
     postgresql@14
     mariadb

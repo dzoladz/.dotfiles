@@ -75,9 +75,6 @@ echo 'source $DOTFILES/shell/exa.zsh\n' >> $HOME/.zshrc
 # VIM - Clone .vim Configuration into $HOME
 git clone --recurse-submodules https://github.com/dzoladz/.vim.git $HOME/.vim
 
-# ASDF | for ZSH and Homebrew
-# https://asdf-vm.com/guide/introduction.html#how-it-works
-echo -e "\n. $(brew --prefix asdf)/libexec/asdf.sh" >> ${ZDOTDIR:-~}/.zshrc
 
 #---------------------------------------------------------
 # Step 6: Install Fonts
@@ -136,10 +133,12 @@ source $DOTFILES/pipx/setup_pipx.sh
 # Step 14: Setup Ruby Environment
 #---------------------------------------------------------
 source $DOTFILES/ruby/setup_ruby.sh
-echo '\neval "$(rbenv init -)"' >> $HOME/.zshrc
+echo '\nsource $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh' >> $HOME/.zshrc
+echo '\nsource $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh' >> $HOME/.zshrc
+echo '\nRUBIES+=(~/.rbenv/versions/*)' >> $HOME/.zshrc
 
 
 #---------------------------------------------------------
 # Step 15: Setup PHP
 #---------------------------------------------------------
-source $DOTFILES/pipx/setup_php.sh
+source $DOTFILES/php/setup_php.sh
