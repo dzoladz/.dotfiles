@@ -82,6 +82,7 @@ cellar=(
     nginx
     zork
     composer
+    sslscan
 )
 
 for formula in "${cellar[@]}"; do
