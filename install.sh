@@ -68,10 +68,6 @@ echo 'source $DOTFILES/shell/aliases.zsh' >> $HOME/.zshrc
 echo '\n#Functions' >> $HOME/.zshrc
 echo 'source $DOTFILES/shell/functions.zsh' >> $HOME/.zshrc
 
-# Options - write to .zshrc file
-echo '\n#EXA - Color Preferences' >> $HOME/.zshrc
-echo 'source $DOTFILES/shell/exa.zsh\n' >> $HOME/.zshrc
-
 # VIM - Clone .vim Configuration into $HOME
 git clone --recurse-submodules https://github.com/dzoladz/.vim.git $HOME/.vim
 
