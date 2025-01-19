@@ -133,9 +133,6 @@ source $DOTFILES/pipx/setup_pipx.sh
 # Step 14: Setup Ruby Environment
 #---------------------------------------------------------
 source $DOTFILES/ruby/setup_ruby.sh
-echo '\nsource $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh' >> $HOME/.zshrc
-echo '\nsource $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh' >> $HOME/.zshrc
-echo '\nRUBIES+=(~/.rbenv/versions/*)' >> $HOME/.zshrc
 
 
 #---------------------------------------------------------

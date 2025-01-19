@@ -15,11 +15,20 @@
 # ----------------------------------------------------------------------
 
 RUBY_VERSION='3.4.1'
+BREW_EXECUTABLE=`which brew`
 
 echo "== Setting Up Ruby $RUBY_VERSION =="
 
 # Install Ruby environment manager
 brew install chruby ruby-install
+
+# Set up Chruby
+export HOMEBREW_PREFIX="/opt/homebrew"
+echo '\nsource $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh' >> $HOME/.zshrc
+echo '\nsource $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh' >> $HOME/.zshrc
+echo '\nRUBIES+=(~/.rbenv/versions/*)' >> $HOME/.zshrc
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/chruby.sh
+source $HOMEBREW_PREFIX/opt/chruby/share/chruby/auto.sh
 
 # Ensure Ruby $RUBY_VERSION is available
 ruby-install ruby $RUBY_VERSION
