@@ -1,6 +1,6 @@
 #!/bin/bash
 # -----------------------------------------------------------------------
-# Copyright (C) 2024
+# Copyright (C) 2025
 # Derek C. Zoladz  <derek@derekzoladz.com>
 #
 # This program is free software; you can redistribute it and/or
@@ -14,37 +14,28 @@
 # GNU General Public License for more details.
 # ----------------------------------------------------------------------
 
-echo "== Setting Up Pipx Path and Applications =="
+echo "== Setting Up uv and uvx Applications =="
 
-which pipx
+which uv
 if [[ $? != 0 ]] ; then
-    echo "Installing Pipx..."
-    brew install pipx
+    echo "Installing ux..."
+    pip3 install uv
 else
-    echo "Pipx is Installed!"
+    echo "uv is Installed!"
 fi
 
-# Ensure Pipx path ($HOME/.local.bin) is in PATH environment variable
-pipx ensurepath
-
-# Install Pipx Apps
-echo 'Installing Applications'
+# Install uvx Binaries
+echo 'Installing uvx Applications'
 
 apps=(
-    poetry
+    ruff
     cookiecutter
     alembic
     hatch
 )
 
 for app in ${apps[@]}; do
-    pipx install $app
+    uv tool install $app
 done
 
-
-# List Installed Applications
-pipx list --short
 sleep 1
-
-# Inject poetry export for SBOM generation on commit
-pipx inject poetry poetry-plugin-export

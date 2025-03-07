@@ -120,9 +120,9 @@ source $DOTFILES/go/setup_golang.sh
 
 
 #---------------------------------------------------------
-# Step 13: Setup Pipx
+# Step 13: Setup UV
 #---------------------------------------------------------
-source $DOTFILES/pipx/setup_pipx.sh
+source $DOTFILES/uv/setup_uv.sh
 
 
 #---------------------------------------------------------
@@ -135,3 +135,8 @@ source $DOTFILES/ruby/setup_ruby.sh
 # Step 15: Setup PHP
 #---------------------------------------------------------
 source $DOTFILES/php/setup_php.sh
+
+#---------------------------------------------------------
+# Step 16: Setup JavaScript
+#---------------------------------------------------------
+source $DOTFILES/js/setup_js.sh

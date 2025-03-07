@@ -1,6 +1,6 @@
 #!/bin/bash
 # -----------------------------------------------------------------------
-# Copyright (C) 2024
+# Copyright (C) 2025
 # Derek C. Zoladz  <derek@derekzoladz.com>
 #
 # This program is free software; you can redistribute it and/or
@@ -25,7 +25,7 @@ sleep 1
 echo "== Setting Up JS Toolchain =="
 
 # Install Volta as Node environment manager
-brew install volta
+curl https://get.volta.sh | bash
 
 VOLTA_VERSION=`volta -v`
 echo "Volta version $VOLTA_VERSION installed!"
@@ -39,7 +39,6 @@ echo "Volta enabled for current user"
 # Node toolchain under Volta's control
 tools=(
     node
-    yarn
     npm
 )
 

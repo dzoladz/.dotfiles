@@ -1,6 +1,6 @@
 #!/bin/sh
 # -----------------------------------------------------------------------
-# Copyright (C) 2024
+# Copyright (C) 2025
 # Derek C. Zoladz  <derek@derekzoladz.com>
 #
 # This program is free software; you can redistribute it and/or
