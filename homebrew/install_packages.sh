@@ -83,6 +83,7 @@ cellar=(
     zork
     composer
     sslscan
+    mailpit
 )
 
 for formula in "${cellar[@]}"; do
