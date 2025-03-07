@@ -69,7 +69,6 @@ cellar=(
     nss # mkcert dependency for Firefox
     iproute2mac
     geckodriver # selenium webdriver
-    asdf
     redis
     postgresql@14
     mariadb
@@ -82,6 +81,8 @@ cellar=(
     elastic/tap/elasticsearch-full
     nginx
     zork
+    composer
+    sslscan
 )
 
 for formula in "${cellar[@]}"; do
