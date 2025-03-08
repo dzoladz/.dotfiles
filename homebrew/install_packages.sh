@@ -30,6 +30,7 @@ echo "== Setting Up Homebrew Packages =="
 # --------------------------------------
 brew tap elastic/tap
 brew tap mongodb/brew
+brew install jesseduffield/lazygit/lazygit
 
 # -----------
 # Brew Cellar
