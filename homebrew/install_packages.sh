@@ -85,6 +85,7 @@ cellar=(
     sslscan
     mailpit
     ripgrep
+    asn
 )
 
 for formula in "${cellar[@]}"; do
