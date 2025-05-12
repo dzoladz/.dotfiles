@@ -108,7 +108,6 @@ cask=(
     discord
     bitwarden
     pycharm
-    joplin
     tunnelblick
     microsoft-teams
     wireshark
@@ -118,6 +117,7 @@ cask=(
     netnewswire
     ruff
     drawio
+    obsidian
 )
 
 for cask in ${cask[@]}; do
