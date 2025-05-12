@@ -87,6 +87,7 @@ cellar=(
     ripgrep
     asn
     just
+    ykman
 )
 
 for formula in "${cellar[@]}"; do
