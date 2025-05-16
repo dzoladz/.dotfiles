@@ -88,6 +88,7 @@ cellar=(
     asn
     just
     ykman
+    lnav
 )
 
 for formula in "${cellar[@]}"; do
