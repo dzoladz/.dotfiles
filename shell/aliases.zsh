@@ -12,7 +12,8 @@ alias youtube-dl="yt-dlp -f 'bestvideo[ext=mp4]+bestaudio[ext=m4a]/mp4'"
 alias sadmin-opal='$HOME/.dotfiles/expect/opal-sierra-connection'
 alias top='htop'
 alias drush='$PWD/vendor/bin/drush'
-alias logviewer='lnav'
+alias logview='lnav'
+alias yubikey-'ykman'
 
 
 # Customized command options, end in a 'z'
