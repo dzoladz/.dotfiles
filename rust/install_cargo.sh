@@ -21,6 +21,8 @@ echo "== Setting Up Cargo =="
 # -----------
 crates=(
     sniffnet
+    procs
+    dua-cli
 )
 
 for crate in ${crates[@]}; do
