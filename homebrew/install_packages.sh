@@ -91,6 +91,7 @@ cellar=(
     ykman
     lnav
     caddy
+    geoipupdate
 )
 
 for formula in "${cellar[@]}"; do
