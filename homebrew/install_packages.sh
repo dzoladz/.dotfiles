@@ -124,6 +124,7 @@ cask=(
     ruff
     drawio
     obsidian
+    icann-rdap
 )
 
 for cask in ${cask[@]}; do
