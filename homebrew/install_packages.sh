@@ -125,6 +125,7 @@ cask=(
     drawio
     obsidian
     icann-rdap
+    microsoft-edge
 )
 
 for cask in ${cask[@]}; do
