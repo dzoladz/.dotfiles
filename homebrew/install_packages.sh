@@ -92,6 +92,7 @@ cellar=(
     lnav
     caddy
     geoipupdate
+    gdal  # Geospatial Data Abstraction Library
 )
 
 for formula in "${cellar[@]}"; do
