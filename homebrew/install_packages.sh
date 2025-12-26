@@ -93,6 +93,7 @@ cellar=(
     caddy
     geoipupdate
     gdal  # Geospatial Data Abstraction Library
+    container-compose  # 'docker compose' for macOS containers
 )
 
 for formula in "${cellar[@]}"; do
