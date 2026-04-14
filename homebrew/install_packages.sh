@@ -71,7 +71,7 @@ cellar=(
     iproute2mac
     geckodriver # selenium webdriver
     redis
-    postgresql@14
+    postgresql@17
     mariadb
     gd
     mongodb-community@7.0
